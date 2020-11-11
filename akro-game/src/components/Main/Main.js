@@ -9,19 +9,30 @@ const Main = () => {
       </h1>
       <div className="main__forms">
         <div className="main__form">
-          <span>Choose Dificulty:</span>
+          <span>
+            Choose <br />
+            Dificulty:
+          </span>
           <div className="main__buttons">
             <button className="main__button">Easy</button>
-            <button className="main__button">Easy</button>
-            <button className="main__button">Easy</button>
+            <button className="main__button">Medium</button>
+            <button className="main__button">Hard</button>
           </div>
         </div>
         <div className="main__form">
-          <span>Number of Poses</span>
+          <span>
+            Number of
+            <br /> Poses
+          </span>
           <div className="main__buttons">
-            <button className="main__button">Easy</button>
-            <button className="main__button">Easy</button>
-            <button className="main__button">Easy</button>
+            <button className="main__button">10</button>
+            <button className="main__button">15</button>
+            <input
+              className="main__input"
+              type="number"
+              name="number"
+              placeholder="my number"
+            ></input>
           </div>
         </div>
       </div>
