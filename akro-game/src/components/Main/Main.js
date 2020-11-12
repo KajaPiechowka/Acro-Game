@@ -7,7 +7,7 @@ const Main = () => {
         Welcome in <br />
         Acro Game!
       </h1>
-      <div className="main__forms">
+      <form className="main__forms">
         <div className="main__form">
           <span>
             Choose <br />
@@ -22,7 +22,7 @@ const Main = () => {
         <div className="main__form">
           <span>
             Number of
-            <br /> Poses
+            <br /> Poses:
           </span>
           <div className="main__buttons">
             <button className="main__button">10</button>
@@ -31,11 +31,14 @@ const Main = () => {
               className="main__input"
               type="number"
               name="number"
-              placeholder="my number"
+              placeholder="number"
             ></input>
           </div>
         </div>
-      </div>
+      </form>
+      <button type="submit" className="main__submit">
+        Generate
+      </button>
     </div>
   );
 };
