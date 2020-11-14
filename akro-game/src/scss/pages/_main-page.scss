@@ -41,32 +41,39 @@
       text-align: center;
     }
   }
-  &__buttons {
+  &__settings {
     height: 10%;
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
-  &__button {
-    border: none;
-    border-radius: none;
-    background-color: transparent;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 18px;
+  &__settings-label {
+    z-index: 2;
+    height: 150%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    &:active {
+      color: $dark-color;
+    }
   }
-  &__button:active {
-    border: none;
-    outline: none;
+  &__radio {
+    opacity: 1;
+    z-index: 2;
+    cursor: pointer;
   }
+
   &__input {
     width: 30%;
-    padding: 10px;
-    border: none !important;
+    height: 150%;
+    border: none;
     background-color: white;
     font-size: 18px;
+    text-align: center;
     &::placeholder {
       font-size: 12px;
       color: $dark-color;
@@ -83,7 +90,6 @@
     font-weight: 300;
     text-transform: uppercase;
     background-color: $darken-color;
-
     border: none;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     border-radius: 40px;
@@ -96,4 +102,16 @@
       outline: none;
     }
   }
+  &__border {
+    width: 30%;
+    height: 150%;
+    border: 1px solid black;
+    position: absolute;
+    top: -30%;
+    z-index: 0;
+  }
+}
+
+.b-left {
+  left: -3%;
 }

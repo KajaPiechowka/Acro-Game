@@ -1,4 +1,6 @@
 import React from "react";
+import Dificulty from "../Forms/Dificulty";
+import Poses from "../Forms/Poses";
 
 const Main = () => {
   return (
@@ -7,36 +9,11 @@ const Main = () => {
         Welcome in <br />
         Acro Game!
       </h1>
-      <form className="main__forms">
-        <div className="main__form">
-          <span>
-            Choose <br />
-            Dificulty:
-          </span>
-          <div className="main__buttons">
-            <button className="main__button">Easy</button>
-            <button className="main__button">Medium</button>
-            <button className="main__button">Hard</button>
-          </div>
-        </div>
-        <div className="main__form">
-          <span>
-            Number of
-            <br /> Poses:
-          </span>
-          <div className="main__buttons">
-            <button className="main__button">10</button>
-            <button className="main__button">15</button>
-            <input
-              className="main__input"
-              type="number"
-              name="number"
-              placeholder="number"
-            ></input>
-          </div>
-        </div>
+      <form className="main__forms" id="main">
+        <Dificulty />
+        <Poses />
       </form>
-      <button type="submit" className="main__submit">
+      <button type="submit" className="main__submit" htmlFor="main">
         Generate
       </button>
     </div>
