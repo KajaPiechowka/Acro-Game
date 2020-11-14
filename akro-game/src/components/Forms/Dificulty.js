@@ -1,41 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Dificulty = () => {
+  const [dificulty, setDificulty] = useState("b-left");
+
+  const valueSetDificulty = (e) => {
+    let value = e.currentTarget.value;
+    setDificulty(value);
+    console.log(dificulty);
+  };
+
   return (
-    <div className="main__form">
+    <div className="form__section ">
       <span>
         Choose <br />
         Dificulty:
       </span>
-      <div className="main__settings">
-        <div className="main__border b-left" />
-        <label className="main__settings-label">
+      <div className="form__settings">
+        <div className={dificulty} />
+        <label className="form__settings-label">
           <input
             type="radio"
             name="dificulty"
-            vlaue="easy"
-            className="main__radio"
-            checked
+            value="b-left"
+            className="form__radio"
+            onChange={valueSetDificulty}
+            defaultChecked="true"
           />
           Easy
         </label>
 
-        <label className="main__settings-label">
+        <label className="form__settings-label">
           <input
             type="radio"
             name="dificulty"
-            value="medium"
-            className="main__radio"
+            value="b-center"
+            className="form__radio"
+            onChange={valueSetDificulty}
           />
           Medium
         </label>
 
-        <label className="main__settings-label">
+        <label className="form__settings-label">
           <input
             type="radio"
             name="dificulty"
-            value="hard"
-            className="main__radio"
+            value="b-right"
+            className="form__radio"
+            onChange={valueSetDificulty}
           />
           Hard
         </label>

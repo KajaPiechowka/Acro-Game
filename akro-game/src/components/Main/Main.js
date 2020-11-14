@@ -9,13 +9,15 @@ const Main = () => {
         Welcome in <br />
         Acro Game!
       </h1>
-      <form className="main__forms" id="main">
-        <Dificulty />
-        <Poses />
+      <form className="form">
+        <div className="form__holder">
+          <Dificulty />
+          <Poses />
+        </div>
+        <button type="submit" className="form__submit">
+          Generate
+        </button>
       </form>
-      <button type="submit" className="main__submit" htmlFor="main">
-        Generate
-      </button>
     </div>
   );
 };
