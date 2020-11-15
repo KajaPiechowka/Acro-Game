@@ -44,7 +44,7 @@
     }
   }
   &__radio {
-    opacity: 0;
+    opacity: 1;
     z-index: 2 !important;
     cursor: pointer;
   }
@@ -94,20 +94,20 @@
   position: absolute;
   top: -30%;
   z-index: 0 !important;
-  transition: left 2s;
+  transition: left 1s;
 }
 
 .b {
   &-left {
     @include border;
-    left: -3%;
+    left: -1%;
   }
   &-center {
     @include border;
-    left: 30%;
+    left: 36%;
   }
   &-right {
     @include border;
-    left: 70%;
+    left: 67%;
   }
 }
