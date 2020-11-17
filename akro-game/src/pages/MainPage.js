@@ -1,12 +1,26 @@
 import React from "react";
+import Dificulty from "../components/Forms/Dificulty";
+import Poses from "../components/Forms/Poses";
+import { Redirect, Link } from "react-router-dom";
 
-import HowToPlayLink from "../components/HowToPlayLink/HowToPlayLink";
+const MainPage = () => {
+  return (
+    <div className="container main">
+      <h1 className="main__title">
+        Welcome in <br />
+        Acro Game!
+      </h1>
+      <div className="form">
+        <div className="form__holder">
+          <Dificulty />
+          <Poses />
+        </div>
+        <Link to="/generated" className="form__submit">
+          Generate
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-const Hero = ({ children }) => (
-  <div className="hero">
-    <HowToPlayLink />
-    {children}
-  </div>
-);
-
-export default Hero;
+export default MainPage;
