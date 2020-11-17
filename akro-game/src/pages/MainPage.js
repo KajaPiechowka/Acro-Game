@@ -1,9 +1,11 @@
 import React from "react";
-import Main from "../components/Main/Main";
 
-const Hero = () => (
+import HowToPlayLink from "../components/HowToPlayLink/HowToPlayLink";
+
+const Hero = ({ children }) => (
   <div className="hero">
-    <Main />
+    <HowToPlayLink />
+    {children}
   </div>
 );
 

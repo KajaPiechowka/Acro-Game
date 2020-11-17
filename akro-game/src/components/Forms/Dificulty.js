@@ -17,37 +17,41 @@ const Dificulty = () => {
       </span>
       <div className="form__settings">
         <div className={dificulty} />
-        <label className="form__settings-label">
-          <input
-            type="radio"
-            name="dificulty"
-            value="b-left"
-            className="form__radio"
-            onChange={valueSetDificulty}
-            defaultChecked="true"
-          />
+
+        <input
+          id="easy"
+          type="radio"
+          name="dificulty"
+          value="b-left"
+          className="form__radio"
+          onChange={valueSetDificulty}
+          defaultChecked="true"
+        />
+        <label className="form__settings-label" htmlFor="easy">
           Easy
         </label>
 
-        <label className="form__settings-label">
-          <input
-            type="radio"
-            name="dificulty"
-            value="b-center"
-            className="form__radio"
-            onChange={valueSetDificulty}
-          />
+        <input
+          id="medium"
+          type="radio"
+          name="dificulty"
+          value="b-center"
+          className="form__radio"
+          onChange={valueSetDificulty}
+        />
+        <label className="form__settings-label" htmlFor="medium">
           Medium
         </label>
 
-        <label className="form__settings-label">
-          <input
-            type="radio"
-            name="dificulty"
-            value="b-right"
-            className="form__radio"
-            onChange={valueSetDificulty}
-          />
+        <input
+          id="hard"
+          type="radio"
+          name="dificulty"
+          value="b-right"
+          className="form__radio"
+          onChange={valueSetDificulty}
+        />
+        <label className="form__settings-label" htmlFor="hard">
           Hard
         </label>
       </div>

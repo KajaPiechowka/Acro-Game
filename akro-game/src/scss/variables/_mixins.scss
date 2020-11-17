@@ -1,0 +1,16 @@
+@mixin link-style {
+  color: $dark-color;
+  text-decoration: none;
+  font-family: $font-main;
+  font-size: 24px;
+  font-weight: 300;
+  border: 1px solid $dark-color;
+  padding: 10px;
+  &:hover {
+    color: black;
+    border: 1px solid black;
+  }
+  &:active {
+    background-color: $light-color;
+  }
+}

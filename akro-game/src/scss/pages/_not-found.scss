@@ -1,0 +1,26 @@
+.not-found {
+  text-align: center;
+  font-family: $font-main;
+  font-weight: 400;
+  h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+  p {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 300;
+  }
+
+  &__link {
+    font-size: 27px;
+    line-height: 40px;
+    text-decoration: none;
+    color: $darken-color;
+
+    &:hover {
+      color: $dark-color;
+      border-bottom: 2px solid $darken-color;
+    }
+  }
+}

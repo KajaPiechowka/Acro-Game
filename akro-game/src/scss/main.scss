@@ -1,7 +1,11 @@
 @import "./settings/reset";
 @import "./variables/fonts";
 @import "./variables/colors";
+@import "./variables/mixins";
 
 @import "./pages/main-page";
+@import "./pages/not-found";
+@import "./pages/how-to-play";
+@import "./pages/generated";
 
 @import "./components/forms";

@@ -1,0 +1,39 @@
+.how-to-play-link {
+  @include link-style;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.how-to-play {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  &__link {
+    @include link-style;
+    margin-top: 3%;
+  }
+  &__title {
+    font-family: $font-main;
+    font-size: 50px;
+    color: $dark-color;
+  }
+  &__text {
+    font-family: $font-main;
+    font-size: 20px;
+    line-height: 27px;
+    width: 60%;
+    margin-top: 5%;
+    &-small {
+      font-family: $font-main;
+      font-size: 25px;
+      line-height: 40px;
+      color: $dark-color;
+    }
+  }
+}

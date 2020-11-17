@@ -44,9 +44,12 @@
     }
   }
   &__radio {
-    opacity: 1;
+    opacity: 0;
     z-index: 2 !important;
     cursor: pointer;
+    &:checked + .form__settings-label {
+      font-weight: 400;
+    }
   }
 
   &__input {
@@ -57,10 +60,7 @@
     background-color: white;
     font-size: 18px;
     text-align: center;
-    &::placeholder {
-      font-size: 12px;
-      color: $dark-color;
-    }
+
     &:focus {
       background-color: $light-color;
       outline: none;
@@ -77,6 +77,7 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
     border-radius: 40px;
     padding: 20px 35px 20px 35px;
+    cursor: pointer;
     &:active {
       background-color: $dark-color;
       box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
@@ -110,4 +111,23 @@
     @include border;
     left: 67%;
   }
+}
+
+.d {
+  &-left {
+    @include border;
+    left: -4%;
+  }
+  &-center {
+    @include border;
+    left: 30%;
+  }
+  &-right {
+    @include border;
+    left: 70%;
+  }
+}
+
+.invisible {
+  display: none;
 }
