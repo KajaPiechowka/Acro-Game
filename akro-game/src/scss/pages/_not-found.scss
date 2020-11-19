@@ -10,17 +10,10 @@
     font-size: 36px;
     line-height: 46px;
     font-weight: 300;
+    margin-bottom: 30px;
   }
 
   &__link {
-    font-size: 27px;
-    line-height: 40px;
-    text-decoration: none;
-    color: $darken-color;
-
-    &:hover {
-      color: $dark-color;
-      border-bottom: 2px solid $darken-color;
-    }
+    @include link-style;
   }
 }

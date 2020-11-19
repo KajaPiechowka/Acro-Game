@@ -1,7 +1,7 @@
 import React from "react";
 import Dificulty from "../components/Forms/Dificulty";
 import Poses from "../components/Forms/Poses";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   return (
