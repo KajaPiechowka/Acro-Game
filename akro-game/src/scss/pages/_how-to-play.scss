@@ -1,22 +1,53 @@
-.how-to-play-link {
+.how-to-play-button {
   @include link-style;
   position: absolute;
   right: 5%;
   top: 5%;
+  background-color: inherit;
+  &:active {
+    outline: none;
+  }
 }
-
+.blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(#ffffff, 0.5);
+}
 .how-to-play {
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-weight: 300;
-  &__link {
-    @include link-style;
-    margin-top: 3%;
+  position: absolute;
+  background-color: white;
+  border-radius: 40px;
+  z-index: 10 !important;
+  border: 1px dashed $dark-color;
+  &__close-btn {
+    border: 1px solid black;
+    background-color: inherit;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-family: $font-main;
+    color: $dark-color;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      font-size: 16px;
+    }
+    &:active {
+      outline: none;
+      background-color: $light-color;
+    }
   }
   &__title {
     font-family: $font-main;

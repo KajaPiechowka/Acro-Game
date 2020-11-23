@@ -1,0 +1,34 @@
+.poses {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(#ffffff, 0.3);
+  border-radius: 40px;
+  &__pose {
+    background-color: $darken-color;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-family: $font-main;
+    border-radius: 0 0 20px 20px;
+    display: inline-block;
+    box-shadow: 0 0 5px 0 rgba(#000000, 0.25);
+  }
+  &__text {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    width: 200px;
+    height: 30px;
+    padding-top: 10px;
+  }
+  &__links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

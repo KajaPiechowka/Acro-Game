@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import HowToPlayButton from "../HowToPlay/HowToPlayButton";
+import HowToPlay from "../HowToPlay/HowToPlay";
 
-import HowToPlayLink from "../HowToPlayLink/HowToPlayLink";
+const Hero = ({ children }) => {
+  const [showHowToPlay, setShowHowToPlay] = useState(false);
 
-const Hero = ({ children }) => (
-  <div className="hero">
-    <HowToPlayLink />
-    {children}
-  </div>
-);
+  const handleShowHowToPlay = () => {
+    setShowHowToPlay((prev) => !prev);
+  };
+
+  return (
+    <div className="hero">
+      {showHowToPlay ? (
+        <HowToPlay event={handleShowHowToPlay} />
+      ) : (
+        <HowToPlayButton event={handleShowHowToPlay} />
+      )}
+
+      {children}
+    </div>
+  );
+};
 
 export default Hero;

@@ -1,26 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { exampleData } from "../assets/data/exampleData";
 
-const API = "http://api.acrogame.net/poses/";
+import PoseList from "../components/Poses/PosesList";
+
+require("dotenv").config();
+
+const api = process.env.REACT_APP_API;
+// const apiKey = process.env.REACT_APP_API_KEY;
 
 const GeneratedPage = () => {
   const [data, setData] = useState(false);
 
   useEffect(() => {
-    console.log(API);
-    fetch(API, {
+    console.log(api);
+
+    fetch(`${api}sequence/generate`, {
       method: "GET",
-      mode: "no-cors",
-      headers: new Headers({
-        api_token: "y4vemThlilQkAeQaesMgCw5MGG3qiiLhmlbD",
-      }),
+      difficulty: 2,
+      length: 5,
     })
       .then((response) => response.json())
       .then((poses) => {
         setData(poses);
-      }, []);
+      });
+
     console.log(data);
-  });
-  return <>{data ? <h1>something</h1> : <h2>nothing</h2>}</>;
+  }, []);
+
+  return <PoseList data={exampleData} />;
+
+  // if (!data) {
+  //   return <h1>Wait...</h1>;
+  // } else {
+  //   return <PoseList data={data} />;
+  // }
 };
 
 export default GeneratedPage;

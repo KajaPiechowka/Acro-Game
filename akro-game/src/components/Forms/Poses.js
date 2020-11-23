@@ -1,12 +1,29 @@
 import React, { useState } from "react";
 
 const Poses = () => {
-  const [chosen, setChosen] = useState("d-left");
+  const [chosen, setChosen] = useState("radio1");
+  const [divPosition, setDivPosition] = useState("d-left");
+  const [posesValue, setPosesValue] = useState("10");
 
-  const valueSetDificulty = (e) => {
+  const valueSetDificulty = async (e) => {
     let value = e.currentTarget.value;
     setChosen(value);
     console.log(chosen);
+
+    if (value === "radio1") {
+      setPosesValue("10");
+      setDivPosition("d-left");
+    } else if (value === "radio2") {
+      setPosesValue("15");
+      setDivPosition("d-center");
+    } else if (value === "radio3") {
+      setDivPosition("d-right");
+    }
+  };
+
+  const changePosesValue = (e) => {
+    let value = e.target.value;
+    setPosesValue(value);
   };
 
   return (
@@ -16,15 +33,15 @@ const Poses = () => {
         <br /> Poses:
       </span>
       <div className="form__settings">
-        <div className={chosen} />
+        <div className={divPosition} />
 
         <input
           id="option1"
           type="radio"
           name="number"
-          value="d-left"
+          value="radio1"
           className="form__radio"
-          checked={chosen === "d-left"}
+          checked={chosen === "radio1"}
           onChange={valueSetDificulty}
         />
         <label className="form__settings-label" htmlFor="option1">
@@ -35,9 +52,9 @@ const Poses = () => {
           id="option2"
           type="radio"
           name="number"
-          value="d-center"
+          value="radio2"
           className="form__radio"
-          checked={chosen === "d-center"}
+          checked={chosen === "radio2"}
           onChange={valueSetDificulty}
         />
         <label className="form__settings-label" htmlFor="option2">
@@ -48,20 +65,18 @@ const Poses = () => {
           id="option3"
           type="radio"
           name="number"
-          value="d-right"
-          className={chosen === "d-right" ? "invisible" : "form__radio"}
-          checked={chosen === "d-right"}
+          value="radio3"
+          className={chosen === "radio3" ? "invisible" : "form__radio"}
+          checked={chosen === "radio3"}
           onChange={valueSetDificulty}
         />
         <label
-          className={
-            chosen === "d-right" ? "invisible" : "form__settings-label"
-          }
+          className={chosen === "radio3" ? "invisible" : "form__settings-label"}
           htmlFor="option3"
         >
           Your Number
         </label>
-        {chosen === "d-right" ? (
+        {chosen === "radio3" ? (
           <input
             className="form__input"
             type="number"
@@ -69,6 +84,7 @@ const Poses = () => {
             min="1"
             max="30"
             autoFocus={true}
+            onChange={changePosesValue}
           ></input>
         ) : null}
       </div>

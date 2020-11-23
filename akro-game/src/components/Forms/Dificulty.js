@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 
 const Dificulty = () => {
-  const [dificulty, setDificulty] = useState("b-left");
+  const [divPosition, setDivPosition] = useState("b-left");
+  const [dificulty, setDificulty] = useState("1");
 
   const valueSetDificulty = (e) => {
     let value = e.currentTarget.value;
     setDificulty(value);
-    console.log(dificulty);
+    if (value === "1") {
+      setDivPosition("b-left");
+    } else if (value === "2") {
+      setDivPosition("b-center");
+    } else if (value === "3") {
+      setDivPosition("b-right");
+    }
   };
 
   return (
@@ -16,13 +23,13 @@ const Dificulty = () => {
         Dificulty:
       </span>
       <div className="form__settings">
-        <div className={dificulty} />
+        <div className={divPosition} />
 
         <input
           id="easy"
           type="radio"
           name="dificulty"
-          value="b-left"
+          value="1"
           className="form__radio"
           onChange={valueSetDificulty}
           defaultChecked="true"
@@ -35,7 +42,7 @@ const Dificulty = () => {
           id="medium"
           type="radio"
           name="dificulty"
-          value="b-center"
+          value="2"
           className="form__radio"
           onChange={valueSetDificulty}
         />
@@ -47,7 +54,7 @@ const Dificulty = () => {
           id="hard"
           type="radio"
           name="dificulty"
-          value="b-right"
+          value="3"
           className="form__radio"
           onChange={valueSetDificulty}
         />
