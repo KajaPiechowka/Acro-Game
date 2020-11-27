@@ -6,8 +6,8 @@ const PoseList = ({ data }) => {
   return (
     <div className="poses">
       <ul className="poses__list">
-        {data.data.map(({ id, name }) => (
-          <Pose name={name} key={id} />
+        {data.data.map(({ id, name }, index) => (
+          <Pose name={name} key={id} index={index} />
         ))}
       </ul>
       <div className="poses__links">

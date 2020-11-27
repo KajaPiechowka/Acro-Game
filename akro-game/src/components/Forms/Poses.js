@@ -1,20 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import SettingsContext from "../../assets/context/SettingsContext";
 
 const Poses = () => {
   const [chosen, setChosen] = useState("radio1");
   const [divPosition, setDivPosition] = useState("d-left");
-  const [posesValue, setPosesValue] = useState("10");
+  const { setContext } = useContext(SettingsContext);
 
   const valueSetDificulty = async (e) => {
     let value = e.currentTarget.value;
     setChosen(value);
-    console.log(chosen);
 
     if (value === "radio1") {
-      setPosesValue("10");
+      setContext((prev) => {
+        return {
+          ...prev,
+          poses: "10",
+        };
+      });
       setDivPosition("d-left");
     } else if (value === "radio2") {
-      setPosesValue("15");
+      setContext((prev) => {
+        return {
+          ...prev,
+          poses: "15",
+        };
+      });
       setDivPosition("d-center");
     } else if (value === "radio3") {
       setDivPosition("d-right");
@@ -23,7 +33,12 @@ const Poses = () => {
 
   const changePosesValue = (e) => {
     let value = e.target.value;
-    setPosesValue(value);
+    setContext((prev) => {
+      return {
+        ...prev,
+        poses: value,
+      };
+    });
   };
 
   return (
