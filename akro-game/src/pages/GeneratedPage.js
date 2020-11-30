@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { exampleData } from "../assets/data/exampleData";
 
-import PoseList from "../components/Poses/PosesList";
+import Pose from "../components/Poses/Pose";
 import SettingsContext from "../assets/context/SettingsContext";
+import { Link } from "react-router-dom";
 
 require("dotenv").config();
 
@@ -40,7 +40,27 @@ const GeneratedPage = () => {
   if (!data) {
     return <h1>Wait...</h1>;
   } else {
-    return <PoseList data={data} />;
+    return (
+      <div className="poses">
+        <ul className="poses__list">
+          {data.data.map(({ id, name }, index) => (
+            <Pose name={name} key={id} index={index} />
+          ))}
+        </ul>
+        <div className="poses__links">
+          <button
+            type="reset"
+            onClick={generateSequence}
+            className="form__submit poses__button"
+          >
+            Generate New
+          </button>
+          <Link to="/" className="form__submit">
+            Change Settings
+          </Link>
+        </div>
+      </div>
+    );
   }
 };
 

@@ -10,7 +10,7 @@
     background-color: $darken-color;
     box-sizing: border-box;
     width: 200px;
-    height: 50px;
+    height: 70px;
     margin: 10px;
     text-align: center;
     font-family: $font-main;
@@ -18,17 +18,30 @@
     display: inline-block;
     box-shadow: 0 0 5px 0 rgba(#000000, 0.25);
   }
-  &__text {
+  &__pose-number {
+    color: $darken-color;
+    margin-right: 10px;
+  }
+  &__pose-text {
     box-sizing: border-box;
     background-color: white;
     border-radius: 0 0 20px 20px;
     width: 200px;
-    height: 30px;
+    height: 50px;
     padding-top: 10px;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__links {
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+  &__button {
+    border: none;
   }
 }
