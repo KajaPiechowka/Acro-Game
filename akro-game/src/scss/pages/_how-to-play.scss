@@ -1,11 +1,17 @@
 .how-to-play-button {
   @include link-style;
   position: absolute;
+
   right: 5%;
   top: 5%;
+
   background-color: inherit;
   &:active {
     outline: none;
+  }
+  @media (max-width: $media-phone) {
+    background-color: rgba(#ffffff, 0.8);
+    top: 2%;
   }
 }
 .blur {
@@ -28,6 +34,10 @@
   border-radius: 40px;
   z-index: 10 !important;
   border: 1px dashed $dark-color;
+  @media (max-width: $media-phone) {
+    width: 90%;
+    height: 60%;
+  }
   &__close-btn {
     border: 1px solid black;
     background-color: inherit;
@@ -53,6 +63,9 @@
     font-family: $font-main;
     font-size: 50px;
     color: $dark-color;
+    @media (max-width: $media-phone) {
+      margin-bottom: 40px;
+    }
   }
   &__text {
     font-family: $font-main;
@@ -60,11 +73,20 @@
     line-height: 27px;
     width: 60%;
     margin-top: 5%;
+    letter-spacing: 2px;
+    @media (max-width: $media-phone) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
     &-small {
       font-family: $font-main;
       font-size: 25px;
       line-height: 40px;
       color: $dark-color;
+      @media (max-width: $media-phone) {
+        margin-top: 10px;
+      }
     }
   }
 }
