@@ -5,6 +5,7 @@ import PageNotFound from "./pages/404";
 import GeneratedPage from "./pages/GeneratedPage";
 import Hero from "./components/Hero/Hero";
 import SettingsContext from "./assets/context/SettingsContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [context, setContext] = useState({ difficulty: "1", poses: "10" });
@@ -18,6 +19,7 @@ function App() {
             <Route path="/generated" component={GeneratedPage} />
             <Route component={PageNotFound} />
           </Switch>
+          <Footer />
         </Hero>
       </HashRouter>
     </SettingsContext.Provider>

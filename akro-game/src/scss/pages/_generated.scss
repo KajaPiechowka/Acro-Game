@@ -8,7 +8,7 @@
   border-radius: 40px;
   @media (max-width: $media-phone) {
     margin-top: 25%;
-    margin-bottom: 20%;
+    margin-bottom: 25%;
   }
   &__pose {
     background-color: $darken-color;
@@ -38,7 +38,7 @@
     height: 50px;
     padding: 15px 5px 0 5px;
     @media (max-width: $media-phone) {
-      font-size: 13px;
+      font-size: 14px;
       padding-top: 10px;
       height: 40px;
     }
@@ -54,7 +54,7 @@
     display: flex;
     justify-content: space-between;
     @media (max-width: $media-phone) {
-      margin-top: 60px;
+      margin-bottom: 50px;
     }
   }
   &__button {
