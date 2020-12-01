@@ -6,6 +6,10 @@
   justify-content: space-around;
   background-color: rgba(#ffffff, 0.3);
   border-radius: 40px;
+  @media (max-width: $media-phone) {
+    margin-top: 25%;
+    margin-bottom: 20%;
+  }
   &__pose {
     background-color: $darken-color;
     box-sizing: border-box;
@@ -17,6 +21,10 @@
     border-radius: 0 0 20px 20px;
     display: inline-block;
     box-shadow: 0 0 5px 0 rgba(#000000, 0.25);
+    @media (max-width: $media-phone) {
+      width: 150px;
+      height: 60px;
+    }
   }
   &__pose-number {
     color: $darken-color;
@@ -26,9 +34,14 @@
     box-sizing: border-box;
     background-color: white;
     border-radius: 0 0 20px 20px;
-    width: 200px;
+    width: inherit;
     height: 50px;
-    padding-top: 10px;
+    padding: 15px 5px 0 5px;
+    @media (max-width: $media-phone) {
+      font-size: 13px;
+      padding-top: 10px;
+      height: 40px;
+    }
   }
   &__list {
     width: 100%;
@@ -40,6 +53,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media (max-width: $media-phone) {
+      margin-top: 60px;
+    }
   }
   &__button {
     border: none;

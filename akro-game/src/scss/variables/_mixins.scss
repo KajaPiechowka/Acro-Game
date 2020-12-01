@@ -15,3 +15,12 @@
     background-color: $light-color;
   }
 }
+
+@mixin border {
+  width: 31%;
+  height: 150%;
+  border: 1px solid black;
+  position: absolute;
+  top: -30%;
+  transition: left 0.5s;
+}
