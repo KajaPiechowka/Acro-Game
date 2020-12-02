@@ -10,8 +10,12 @@ const api = process.env.REACT_APP_API;
 const apiKey = process.env.REACT_APP_API_KEY;
 
 const GeneratedPage = () => {
-  const { context } = useContext(SettingsContext);
+  const { context, setContext } = useContext(SettingsContext);
   const [data, setData] = useState(false);
+
+  const resetContext = () => {
+    setContext({ difficulty: "1", poses: "10" });
+  };
 
   const generateSequence = () => {
     fetch(
@@ -51,11 +55,11 @@ const GeneratedPage = () => {
           <button
             type="reset"
             onClick={generateSequence}
-            className="form__submit poses__button"
+            className="poses__button"
           >
             Generate New
           </button>
-          <Link to="/" className="form__submit">
+          <Link to="/" className="poses__button" onClick={resetContext}>
             Change Settings
           </Link>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
-      <span className="footer__version">Acro Game v.1.0.0</span>
+      <span className="footer__version">Acro Game v.1.0.1</span>
       <div className="footer__holder">
         <p className="footer__text">We hope that you ejoy playing this game!</p>
         <span className="footer__authors">Acro Game Team</span>

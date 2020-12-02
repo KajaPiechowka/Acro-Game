@@ -6,7 +6,7 @@
   bottom: 0;
 
   @media (max-width: $media-phone) {
-    height: 100px;
+    height: 120px;
   }
   &__holder {
     position: absolute;
@@ -21,18 +21,28 @@
     font-family: $font-main;
     @media (max-width: $media-phone) {
       bottom: 50px;
+      width: 280px;
     }
   }
   &__version {
     position: absolute;
     color: rgba(#ffffffff, 0.5);
     bottom: 10px;
+    font-family: $font-main;
+    font-size: 12px;
+    left: 5px;
   }
   &__text {
     font-size: 16px;
+    line-height: 20px;
+    @media (max-width: $media-phone) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   &__authors {
     font-size: 12px;
+    line-height: 16px;
   }
   &__email {
     font-family: $font-main;

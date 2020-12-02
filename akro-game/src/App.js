@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MainPage from "./pages/MainPage";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PageNotFound from "./pages/404";
 import GeneratedPage from "./pages/GeneratedPage";
 import Hero from "./components/Hero/Hero";
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <SettingsContext.Provider value={{ context, setContext }}>
-      <HashRouter>
+      <BrowserRouter>
         <Hero>
           <Switch>
             <Route exact path="/" component={MainPage} />
@@ -21,7 +21,7 @@ function App() {
           </Switch>
           <Footer />
         </Hero>
-      </HashRouter>
+      </BrowserRouter>
     </SettingsContext.Provider>
   );
 }

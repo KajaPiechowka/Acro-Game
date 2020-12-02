@@ -86,7 +86,11 @@ const Poses = () => {
           onChange={valueSetDificulty}
         />
         <label
-          className={chosen === "radio3" ? "invisible" : "form__settings-label"}
+          className={
+            chosen === "radio3"
+              ? "invisible"
+              : "form__settings-label custom-number"
+          }
           htmlFor="option3"
         >
           Your Number
