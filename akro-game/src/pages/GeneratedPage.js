@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 require("dotenv").config();
 
 const api = process.env.REACT_APP_API;
-const apiKey = process.env.REACT_APP_API_KEY;
 
 const GeneratedPage = () => {
   const { context, setContext } = useContext(SettingsContext);
@@ -37,7 +36,6 @@ const GeneratedPage = () => {
   };
 
   useEffect(() => {
-    console.log(context);
     generateSequence();
   }, []);
 
