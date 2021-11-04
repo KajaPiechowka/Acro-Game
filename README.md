@@ -1,7 +1,9 @@
-# Acro-Game
+# Acro Game
 
-Project made for people who wan't to play acro game.
+**A game for those who want to try something new in the world of acro yoga.**
 
-Acro game is the acro yoga poses generator, the goal is to make generated poses with as less transitions as possible. 
+Choosing difficulty and length of the progression you will end up with
+a list of acro yoga poses Your goal is to transition from through all
+them one by one doing as few of transition poses as possible.
 
-Madde with Create React App. 
+**Game is build with Create React App and Sass**
