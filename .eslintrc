@@ -1,0 +1,47 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "react/forbid-prop-types": [
+      1,
+      {
+        "checkContextTypes": false,
+        "checkChildContextTypes": false
+      }
+    ],
+
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    ],
+    "import/extensions": [
+      1,
+      { "extensions": ["js", "jsx", "ts", "tsx", "json"] }
+    ],
+    "import/no-unresolved": 0,
+    "no-undef": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-unused-vars": [
+      1,
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
+      }
+    ],
+    "jsx-a11y/no-autofocus": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "no-undef": "warn"
+      }
+    }
+  ]
+}

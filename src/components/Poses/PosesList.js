@@ -1,6 +1,6 @@
-import React from "react";
-import Pose from "./Pose";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Pose from './Pose';
 
 const PoseList = ({ data }) => {};
 export default PoseList;

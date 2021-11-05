@@ -1,13 +1,14 @@
-@import "./settings/reset";
-@import "./variables/fonts";
-@import "./variables/colors";
-@import "./variables/mixins";
-@import "./variables/screen-sizes";
+@import './settings/reset';
+@import './variables/fonts';
+@import './variables/colors';
+@import './variables/mixins';
+@import './variables/screen-sizes';
 
-@import "./pages/main-page";
-@import "./pages/not-found";
-@import "./pages/how-to-play";
-@import "./pages/generated";
+@import './pages/main-page';
+@import './pages/not-found';
+@import './pages/how-to-play';
+@import './pages/generated';
 
-@import "./components/forms";
-@import "./components/footer";
+@import './components/forms';
+@import './components/header';
+@import './components/footer';

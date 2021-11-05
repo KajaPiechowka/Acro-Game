@@ -5,9 +5,6 @@
   position: absolute;
   bottom: 0;
 
-  @media (max-width: $media-phone) {
-    height: 120px;
-  }
   &__holder {
     position: absolute;
     bottom: 10px;
@@ -35,10 +32,6 @@
   &__text {
     font-size: 16px;
     line-height: 20px;
-    @media (max-width: $media-phone) {
-      font-size: 18px;
-      line-height: 22px;
-    }
   }
   &__authors {
     font-size: 12px;
@@ -50,8 +43,5 @@
     color: white;
     bottom: 20px;
     right: 10px;
-    @media (max-width: $media-phone) {
-      bottom: 10px;
-    }
   }
 }
