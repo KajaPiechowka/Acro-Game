@@ -19,8 +19,8 @@ function App() {
             <Route path="/generated" component={GeneratedPage} />
             <Route component={PageNotFound} />
           </Switch>
-          <Footer />
         </Hero>
+        <Footer />
       </BrowserRouter>
     </SettingsContext.Provider>
   );
