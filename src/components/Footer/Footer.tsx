@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = (): JSX.Element => (
   <div className="footer">
     <span className="footer__version">Acro Game v.2.0</span>

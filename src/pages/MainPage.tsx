@@ -1,5 +1,6 @@
 import { Slider } from '@mui/material';
 import React from 'react';
+import CustomSlider from '../components/CustomSlider/CustomSlider';
 
 function valuetext(value: number) {
   return `${value}`;
@@ -13,15 +14,7 @@ const MainPage = () => (
         Acro Game!
       </h1>
       <p className="content__text">Number of Poses:</p>
-      <Slider
-        aria-label="poses"
-        getAriaValueText={valuetext}
-        defaultValue={5}
-        marks
-        max={30}
-        step={5}
-        valueLabelDisplay="auto"
-      />
+      <CustomSlider aria-label="poses" />
       <p className="content__text">Choose Difficulty:</p>
       <Slider
         aria-label="difficulty"
