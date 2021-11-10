@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Logo from '../../assets/icons/Logo.png';
 
 const Header = (): JSX.Element => (
