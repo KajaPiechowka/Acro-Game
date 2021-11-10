@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import PageNotFound from './pages/404';

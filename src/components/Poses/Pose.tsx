@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface PoseProps {
   name: string;
   index: number;

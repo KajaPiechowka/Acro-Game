@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Slider } from '@mui/material';
 import { withStyles, makeStyles } from '@mui/material/styles';
 
@@ -19,7 +19,7 @@ const ContinuousSlider = withStyles({
 
 export default function CustomSlider() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(30);
+  const [value, setValue] = useState(30);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
