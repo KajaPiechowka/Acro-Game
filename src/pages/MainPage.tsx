@@ -1,8 +1,4 @@
-import { Slider } from '@mui/material';
-
-function valuetext(value: number) {
-  return `${value}`;
-}
+import SettingsForm from '../components/SettingsForm/SettingsForm';
 
 const MainPage = () => (
   <div className="content">
@@ -11,26 +7,7 @@ const MainPage = () => (
         Welcome in <br />
         Acro Game!
       </h1>
-      <p className="content__text">Number of Poses:</p>
-      <Slider
-        aria-label="poses"
-        getAriaValueText={valuetext}
-        defaultValue={1}
-        marks
-        max={5}
-        step={1}
-        valueLabelDisplay="auto"
-      />
-      <p className="content__text">Choose Difficulty:</p>
-      <Slider
-        aria-label="difficulty"
-        getAriaValueText={valuetext}
-        defaultValue={1}
-        marks
-        max={5}
-        step={1}
-        valueLabelDisplay="auto"
-      />
+      <SettingsForm />
     </div>
   </div>
 );
