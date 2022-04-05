@@ -1,7 +1,6 @@
 import { Slider } from '@mui/material';
 import { useContext } from 'react';
 import SettingsContext from '../../assets/context/SettingsContext';
-import CustomSlider from './CustomSlider';
 
 function valuetext(value) {
   return `${value}`;
@@ -29,6 +28,7 @@ const SettingsForm = () => {
     <>
       <p className="content__text">Number of Poses:</p>
       <Slider
+        color="secondary"
         aria-label="poses"
         getAriaValueText={valuetext}
         defaultValue={5}
@@ -39,19 +39,19 @@ const SettingsForm = () => {
         step={5}
         valueLabelDisplay="auto"
       />
-      {/* <p className="content__text">Choose Difficulty:</p>
+      <p className="content__text">Choose Difficulty:</p>
       <Slider
         aria-label="difficulty"
+        color="secondary"
         getAriaValueText={valuetext}
         defaultValue={1}
         onChange={valueSetDifficulty}
-        marks={marks}
+        marks
         min={1}
         max={3}
         step={1}
         valueLabelDisplay="auto"
-      /> */}
-      <CustomSlider sliderEvent={valueSetDifficulty} />
+      />
     </>
   );
 };
