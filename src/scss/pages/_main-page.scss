@@ -1,6 +1,9 @@
+body {
+  font-family: $font-main;
+}
 .hero {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../../assets/images/hero.png");
   background-size: cover;
   display: flex;
@@ -8,14 +11,21 @@
   align-items: center;
   position: relative;
   @media (max-width: $media-phone) {
-    height: auto;
-    min-height: 100vh;
+    height: 100%;
   }
   &__menu {
-    position: absolute;
+    width: 100vw;
+    position: fixed;
     right: 5%;
     top: 5%;
     display: flex;
+    z-index: 1000;
+    justify-content: flex-end;
+    @media (max-width: $media-tablet) {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
     li {
       display: flex;
       justify-content: center;
@@ -27,29 +37,24 @@
     @include link-style;
     border: none;
     font-weight: 500;
+    text-align: center;
     &:hover {
       border: none;
     }
   }
 }
 .container {
-  width: 70%;
-  height: 70%;
-  @media (max-width: $media-tablet) {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(#ffffff, 0.5);
-  }
-  @media (max-width: $media-phone) {
-    margin-bottom: 100px;
-  }
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgba(#ffffff, 0.5);
 }
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: $font-main;
   font-weight: 300;
 
   &__title {

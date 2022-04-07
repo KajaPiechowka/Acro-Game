@@ -4,7 +4,7 @@ import KajaPhoto from "../assets/images/kaja.png";
 import ViliusPhoto from "../assets/images/vilius.png";
 
 const VilniusPage = () => (
-  <div className="container main">
+  <div className="container">
     <div className="classes">
       <img
         className="classes__main-image"
@@ -18,6 +18,11 @@ const VilniusPage = () => (
           positions of acro yoga. Trying to get in, out and through them as
           easily as possible. These classes will be sequential meaning that
           we'll be using skills we learn in one class for the next time.
+        </p>
+        <p>
+          Classes on Tuesday and Thursday 20:00-22:00
+          <br />
+          Konstitucijos pr. 25, room 301 (LVJC)
         </p>
         <div className="classes__links">
           <a href="https://www.facebook.com/events/649443812814476/649443839481140">
