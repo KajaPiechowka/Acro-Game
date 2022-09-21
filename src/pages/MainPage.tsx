@@ -1,5 +1,3 @@
-import SettingsForm from '../components/SettingsForm/SettingsForm';
-
 const MainPage = () => (
   <div className="content">
     <div className="content__wrapper">
@@ -7,7 +5,6 @@ const MainPage = () => (
         Welcome in <br />
         Acro Game!
       </h1>
-      <SettingsForm />
     </div>
   </div>
 );

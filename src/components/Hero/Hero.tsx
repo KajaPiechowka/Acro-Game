@@ -1,3 +1,4 @@
+import Button from '../Button/Button';
 import Header from '../Header/Header';
 
 interface HeroProps {
@@ -19,7 +20,9 @@ const Hero = ({ children }: HeroProps) => (
           </p>
         </div>
         <div className="hero__button-wrapper">
-          <button type="button">How to Play?</button>
+          <Button text="How to Play?" />
+          <Button text="List of poses" />
+          <Button text="About Acro yoga" />
         </div>
       </div>
     </div>
