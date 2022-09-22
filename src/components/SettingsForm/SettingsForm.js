@@ -28,7 +28,7 @@ const SettingsForm = () => {
     <>
       <p className="content__text">Number of Poses:</p>
       <Slider
-        color="secondary"
+        color="primary"
         aria-label="poses"
         getAriaValueText={valuetext}
         defaultValue={5}

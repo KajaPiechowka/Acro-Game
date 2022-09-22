@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import Button from '../Button/Button';
 import Header from '../Header/Header';
 
@@ -6,7 +7,7 @@ interface HeroProps {
 }
 
 const Hero = ({ children }: HeroProps) => (
-  <div className="container">
+  <Container className="container">
     <Header />
     <div className="hero">
       <div className="hero__yellow-wrapper">
@@ -22,11 +23,11 @@ const Hero = ({ children }: HeroProps) => (
         <div className="hero__button-wrapper">
           <Button text="How to Play?" />
           <Button text="List of poses" />
-          <Button text="About Acro yoga" />
+          {/* <Button text="About Acro yoga" /> */}
         </div>
       </div>
     </div>
     {children}
-  </div>
+  </Container>
 );
 export default Hero;
