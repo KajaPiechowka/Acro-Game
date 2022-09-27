@@ -19,7 +19,7 @@ const SettingsForm = () => {
   const { yellow, orange, red, green, blue } = colors;
   const [posesActiveColor, setPosesActiveColor] = useState(blue);
   const [difficultyActiveColor, setDifficultyActiveColor] = useState(blue);
-
+  // TODO: more reusable logic for changing colors
   const changePosesColor = (value) => {
     switch (value) {
       case 10:
