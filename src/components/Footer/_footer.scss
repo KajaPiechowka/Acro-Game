@@ -1,0 +1,10 @@
+.footer {
+  width: 50%;
+  height: 140px;
+  background-color: $color-yellow;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 6px 6px 20px 10px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 70% 5% 0 5%;
+}

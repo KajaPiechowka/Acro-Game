@@ -1,11 +1,13 @@
 .hero {
   width: 100vw;
-  height: 340px;
+  height: 360px;
+  padding-top: 20px;
   background-image: url('../../assets/images/HeroMobile.jpg');
   background-size: cover;
   background-position-x: right;
-  background-position-y: top;
-  margin-top: 20px;
+  background-position-y: 20px;
+  box-sizing: border-box;
+
   font-family: $font-main;
   &__yellow-wrapper {
     width: 50vw;
@@ -44,11 +46,13 @@
 }
 .container {
   padding: 0 !important;
+  position: relative;
 }
 
 .content {
   width: 100vw;
-  min-height: 300px;
+  min-height: 500px;
+  height: calc(100% - 360px);
   background-color: $dark-color;
   padding-left: 20px;
   padding-left: 30px;
@@ -76,19 +80,7 @@
       rgba(90, 125, 188, 0.05) 0px -0.25em 1em;
   }
   &__wrapper {
-    width: 70vw;
-    span.MuiSlider-rail {
-      color: $darken-color;
-    }
-    span.MuiSlider-track {
-      border: none;
-      background-image: linear-gradient(
-        to right,
-        $color-blue,
-        $color-yellow,
-        $color-red
-      );
-    }
+    width: 70%;
   }
 }
 .main {

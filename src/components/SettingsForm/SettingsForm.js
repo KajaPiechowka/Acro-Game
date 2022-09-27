@@ -1,6 +1,6 @@
-import { Slider, styled } from '@mui/material';
 import { useContext, useState } from 'react';
 import SettingsContext from '../../assets/context/SettingsContext';
+import RainbowSlider from '../RainbowSlider/RainbowSlider';
 
 function valuetext(value) {
   return `${value}`;
@@ -14,50 +14,11 @@ const colors = {
   blue: '#19d3fc',
 };
 
-const PrettoSlider = styled(Slider)(({ activeColor }) => ({
-  color: activeColor,
-  height: 6,
-  '& .MuiSlider-track': {
-    border: 'none',
-  },
-  '& .MuiSlider-thumb': {
-    height: 20,
-    width: 20,
-    backgroundColor: '#fff',
-    border: '2px solid currentColor',
-    '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
-      boxShadow: 'inherit',
-    },
-    '&:before': {
-      display: 'none',
-    },
-  },
-  '& .MuiSlider-valueLabel': {
-    lineHeight: 1.2,
-    fontSize: 12,
-    background: 'unset',
-    padding: 0,
-    width: 26,
-    height: 26,
-    borderRadius: '50% 50% 50% 0',
-    backgroundColor: activeColor,
-    color: '#000000',
-    transformOrigin: 'bottom left',
-    transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
-    '&:before': { display: 'none' },
-    '&.MuiSlider-valueLabelOpen': {
-      transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
-    },
-    '& > *': {
-      transform: 'rotate(45deg)',
-    },
-  },
-}));
-
 const SettingsForm = () => {
   const { setContext } = useContext(SettingsContext);
-  const [posesActiveColor, setPosesActiveColor] = useState('#fff500');
   const { yellow, orange, red, green, blue } = colors;
+  const [posesActiveColor, setPosesActiveColor] = useState(blue);
+  const [difficultyActiveColor, setDifficultyActiveColor] = useState(blue);
 
   const changePosesColor = (value) => {
     switch (value) {
@@ -68,16 +29,29 @@ const SettingsForm = () => {
         setPosesActiveColor(yellow);
         break;
       case 20:
-        setPosesActiveColor(orange);
+        setPosesActiveColor(yellow);
         break;
       case 25:
-        setPosesActiveColor(red);
+        setPosesActiveColor(orange);
         break;
       case 30:
         setPosesActiveColor(red);
         break;
       default:
         setPosesActiveColor(blue);
+    }
+  };
+
+  const changeDifficultyColor = (value) => {
+    switch (value) {
+      case 2:
+        setDifficultyActiveColor(yellow);
+        break;
+      case 3:
+        setDifficultyActiveColor(red);
+        break;
+      default:
+        setDifficultyActiveColor(blue);
     }
   };
 
@@ -90,18 +64,19 @@ const SettingsForm = () => {
     changePosesColor(value);
   };
 
-  const valueSetDifficulty = (value) => {
+  const valueSetDifficulty = (e) => {
+    const { value } = e.target;
     setContext((prev) => ({
       ...prev,
       difficulty: value,
     }));
+    changeDifficultyColor(value);
   };
 
   return (
     <>
       <p className="content__text">Number of Poses:</p>
-      {console.log(Slider)}
-      <PrettoSlider
+      <RainbowSlider
         aria-label="poses"
         getAriaValueText={valuetext}
         defaultValue={5}
@@ -111,10 +86,10 @@ const SettingsForm = () => {
         min={5}
         step={5}
         activeColor={posesActiveColor}
-        valueLabelDisplay="auto"
+        valueLabelDisplay="on"
       />
       <p className="content__text">Choose Difficulty:</p>
-      <PrettoSlider
+      <RainbowSlider
         aria-label="difficulty"
         getAriaValueText={valuetext}
         defaultValue={1}
@@ -123,8 +98,8 @@ const SettingsForm = () => {
         min={1}
         max={3}
         step={1}
-        activeColor="#ffffff"
-        valueLabelDisplay="auto"
+        activeColor={difficultyActiveColor}
+        valueLabelDisplay="on"
       />
     </>
   );

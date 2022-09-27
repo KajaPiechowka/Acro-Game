@@ -1,0 +1,15 @@
+.css-187mznn-MuiSlider-root {
+  color: $color-yellow !important;
+}
+span.MuiSlider-rail {
+  color: $darken-color;
+}
+span.MuiSlider-track {
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    $color-blue,
+    $color-yellow,
+    $color-red
+  );
+}

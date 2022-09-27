@@ -1,5 +1,6 @@
 import { Container } from '@mui/material';
 import Button from '../Button/Button';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 interface HeroProps {
@@ -28,6 +29,7 @@ const Hero = ({ children }: HeroProps) => (
       </div>
     </div>
     {children}
+    <Footer />
   </Container>
 );
 export default Hero;

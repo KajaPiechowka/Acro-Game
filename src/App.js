@@ -37,7 +37,6 @@ function App() {
               <Route component={PageNotFound} />
             </Switch>
           </Hero>
-          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </SettingsContext.Provider>
