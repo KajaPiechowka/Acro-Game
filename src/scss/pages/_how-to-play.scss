@@ -1,9 +1,5 @@
 .how-to-play-button {
   @include link-style;
-  position: absolute;
-
-  right: 5%;
-  top: 5%;
 
   background-color: inherit;
   &:active {
@@ -11,7 +7,6 @@
   }
   @media (max-width: $media-phone) {
     background-color: rgba(#ffffff, 0.8);
-    top: 2%;
   }
 }
 .blur {
