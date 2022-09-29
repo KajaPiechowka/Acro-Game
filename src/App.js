@@ -13,7 +13,6 @@ import PageNotFound from './pages/404';
 import GeneratedPage from './pages/GeneratedPage';
 import Hero from './components/Hero/Hero';
 import SettingsContext from './assets/context/SettingsContext';
-import Footer from './components/Footer/Footer';
 
 const customTheme = createTheme({
   palette: {
