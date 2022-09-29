@@ -11,7 +11,7 @@ const Footer = () => (
     </div>
     <div className="footer__yellow-wrapper">
       <div className="footer__white-wrapper">
-        <div>
+        <div className="footer__white-wrapper-left">
           <p>We hope that you had fun with our game! Acro Game Team</p>
           <span className="footer__email">info@acrogame.net</span>
         </div>
