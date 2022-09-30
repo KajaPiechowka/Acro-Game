@@ -1,4 +1,6 @@
+import { Button } from '@mui/material';
 import { useContext, useState } from 'react';
+
 import SettingsContext from '../../assets/context/SettingsContext';
 import RainbowSlider from '../RainbowSlider/RainbowSlider';
 
@@ -55,22 +57,15 @@ const SettingsForm = () => {
     }
   };
 
-  const changePosesValue = (e) => {
-    const { value } = e.target;
+  const changeValue = (e) => {
+    const { value, name } = e.target;
     setContext((prev) => ({
       ...prev,
-      poses: value,
+      [name]: value,
     }));
-    changePosesColor(value);
-  };
-
-  const valueSetDifficulty = (e) => {
-    const { value } = e.target;
-    setContext((prev) => ({
-      ...prev,
-      difficulty: value,
-    }));
-    changeDifficultyColor(value);
+    return name === 'poses'
+      ? changePosesColor(value)
+      : changeDifficultyColor(value);
   };
 
   return (
@@ -78,9 +73,10 @@ const SettingsForm = () => {
       <p className="content__text">Number of Poses:</p>
       <RainbowSlider
         aria-label="poses"
+        name="poses"
         getAriaValueText={valuetext}
         defaultValue={5}
-        onChange={changePosesValue}
+        onChange={changeValue}
         marks
         max={30}
         min={5}
@@ -91,9 +87,10 @@ const SettingsForm = () => {
       <p className="content__text">Choose Difficulty:</p>
       <RainbowSlider
         aria-label="difficulty"
+        name="difficulty"
         getAriaValueText={valuetext}
         defaultValue={1}
-        onChange={valueSetDifficulty}
+        onChange={changeValue}
         marks
         min={1}
         max={3}
@@ -101,6 +98,7 @@ const SettingsForm = () => {
         activeColor={difficultyActiveColor}
         valueLabelDisplay="on"
       />
+      <Button href="/generated">Generate</Button>
     </>
   );
 };

@@ -7,10 +7,9 @@
 @import './pages/main-page';
 @import './pages/not-found';
 @import './pages/how-to-play';
-@import './pages/generated';
+@import '../pages/GeneratedPage/generated';
 
 @import '../components/Header/header';
-@import '../components/Button/button';
 
 @import '../components/Footer/footer';
 @import '../components/RainbowSlider/rainbow-slider';

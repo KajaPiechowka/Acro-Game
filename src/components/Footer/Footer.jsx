@@ -16,10 +16,18 @@ const Footer = () => (
           <span className="footer__email">info@acrogame.net</span>
         </div>
         <div className="footer__icons">
-          <IconButton className="footer__icon" size="small">
+          <IconButton
+            className="footer__icon"
+            size="small"
+            href="https://www.facebook.com/AcroGameApp"
+          >
             <Facebook />
           </IconButton>
-          <IconButton className="footer__icon" size="small">
+          <IconButton
+            className="footer__icon"
+            size="small"
+            href="https://www.instagram.com/acrogame_net/"
+          >
             <Instagram />
           </IconButton>
         </div>

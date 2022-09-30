@@ -1,5 +1,4 @@
-import { Container } from '@mui/material';
-import Button from '../Button/Button';
+import { Container, Button } from '@mui/material';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
@@ -22,9 +21,22 @@ const Hero = ({ children }: HeroProps) => (
           </p>
         </div>
         <div className="hero__button-wrapper">
-          <Button text="How to Play?" />
-          <Button text="List of poses" />
-          {/* <Button text="About Acro yoga" /> */}
+          <Button
+            variant="contained"
+            size="small"
+            color="secondary"
+            sx={{ textTransform: 'capitalize' }}
+          >
+            How to Play?
+          </Button>
+          <Button
+            variant="contained"
+            size="small"
+            color="secondary"
+            sx={{ textTransform: 'capitalize' }}
+          >
+            List of poses
+          </Button>
         </div>
       </div>
     </div>
