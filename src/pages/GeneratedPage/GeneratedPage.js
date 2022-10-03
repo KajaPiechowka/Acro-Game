@@ -44,7 +44,7 @@ const GeneratedPage = () => {
   }
   return (
     <div className="content">
-      <div className="content__wrapper">
+      <div className="content__wrapper" style={{ padding: '0 20px 240px 0' }}>
         <div className="content__rouned-border" />
 
         <ul className="poses__list">

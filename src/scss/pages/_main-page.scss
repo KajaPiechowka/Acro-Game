@@ -73,7 +73,7 @@
   width: 100vw;
   min-height: 560px;
   height: calc(100% - 360px);
-  background-color: $dark-color;
+  background-color: $color-black;
   padding-left: 20px;
   font-family: $font-main;
   position: relative;
@@ -88,7 +88,7 @@
     color: white;
   }
   &__rouned-border {
-    background-color: $dark-color;
+    background-color: $color-black;
     height: 40px;
     width: 100%;
     position: absolute;

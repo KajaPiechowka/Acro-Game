@@ -1,28 +1,4 @@
 .poses {
-  &__pose {
-    background-color: $darken-color;
-    box-sizing: border-box;
-    width: 42%;
-    height: 70px;
-    margin: 10px;
-    text-align: center;
-    font-family: $font-main;
-    border-radius: 0 0 20px 20px;
-    display: inline-block;
-    box-shadow: 0 0 5px 0 rgba(#000000, 0.25);
-  }
-  &__pose-number {
-    color: $darken-color;
-    margin-right: 10px;
-  }
-  &__pose-text {
-    box-sizing: border-box;
-    background-color: white;
-    border-radius: 0 0 20px 20px;
-    width: inherit;
-    height: 50px;
-    padding: 15px 5px 0 5px;
-  }
   &__list {
     width: 100%;
     display: flex;

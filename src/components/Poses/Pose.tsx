@@ -1,13 +1,18 @@
+import Bird from '../../assets/images/poses/Bird.JPEG';
+
 interface PoseProps {
   name: string;
   index: number;
 }
 
 const Pose = ({ name, index }: PoseProps) => (
-  <li className="poses__pose">
-    <div className="poses__pose-text">
-      <span className="poses__pose-number">{index + 1}.</span>
-      {name}
+  <li className="pose">
+    <div className="pose__wrapper">
+      <p className="pose__text">
+        <span>{index + 1}. </span>
+        {name}
+      </p>
+      <img src={Bird} className="pose__img" alt="bird" />
     </div>
   </li>
 );
