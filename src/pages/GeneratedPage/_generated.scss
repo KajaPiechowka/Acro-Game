@@ -1,25 +1,15 @@
 .poses {
   &__list {
+    padding-top: 20px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   &__links {
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    @media (max-width: $media-phone) {
-      margin-bottom: 50px;
-      padding-right: 5%;
-      padding-left: 5%;
-    }
-  }
-
-  &__mobile {
-    @media (max-width: $media-phone) {
-      padding: 10px;
-      font-size: 10px;
-    }
   }
 }

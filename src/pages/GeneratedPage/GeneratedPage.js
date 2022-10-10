@@ -10,6 +10,7 @@ const api = process.env.REACT_APP_API;
 
 const GeneratedPage = () => {
   const { context, setContext } = useContext(SettingsContext);
+  console.log(context);
   const [data, setData] = useState(false);
 
   const resetContext = () => {
@@ -46,10 +47,9 @@ const GeneratedPage = () => {
     <div className="content">
       <div className="content__wrapper" style={{ padding: '0 20px 240px 0' }}>
         <div className="content__rouned-border" />
-
         <ul className="poses__list">
-          {data.data.map(({ id, name }, index) => (
-            <Pose name={name} key={id} index={index} />
+          {data.data.map(({ id, name, difficulty }, index) => (
+            <Pose name={name} key={id} index={index} colorIndex={difficulty} />
           ))}
         </ul>
         <div className="poses__links">

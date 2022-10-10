@@ -1,23 +1,17 @@
 import { Button } from '@mui/material';
 import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import SettingsContext from '../../assets/context/SettingsContext';
+import { colors } from '../../utils';
 import RainbowSlider from '../RainbowSlider/RainbowSlider';
 
 function valuetext(value) {
   return `${value}`;
 }
 
-const colors = {
-  yellow: '#fff500',
-  orange: '#ff7a00',
-  red: '#ff0000',
-  green: '#8de47d',
-  blue: '#19d3fc',
-};
-
 const SettingsForm = () => {
-  const { setContext } = useContext(SettingsContext);
+  const { context, setContext } = useContext(SettingsContext);
   const { yellow, orange, red, green, blue } = colors;
   const [posesActiveColor, setPosesActiveColor] = useState(blue);
   const [difficultyActiveColor, setDifficultyActiveColor] = useState(blue);
@@ -98,7 +92,14 @@ const SettingsForm = () => {
         activeColor={difficultyActiveColor}
         valueLabelDisplay="on"
       />
-      <Button href="/generated">Generate</Button>
+      {/* TODO: Make the color an average of colors in two inputs */}
+      <Link
+        to="/generated"
+        className="link-button"
+        style={{ color: difficultyActiveColor }}
+      >
+        Generate
+      </Link>
     </>
   );
 };
