@@ -41,7 +41,8 @@ const GeneratedPage = () => {
   }, []);
 
   if (!data) {
-    return <h1>Wait...</h1>;
+    // TODO: Better Spinner
+    return <h1 style={{ color: 'white' }}>Wait...</h1>;
   }
   return (
     <div className="content">

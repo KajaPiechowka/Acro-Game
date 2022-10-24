@@ -9,7 +9,7 @@ import { blue, red, yellow } from '@mui/material/colors';
 // CUSTOM COMPONENTS
 
 import MainPage from './pages/MainPage';
-import PageNotFound from './pages/404';
+import PageNotFound from './pages/NotFound/404';
 import GeneratedPage from './pages/GeneratedPage/GeneratedPage';
 import Hero from './components/Hero/Hero';
 import SettingsContext from './assets/context/SettingsContext';
