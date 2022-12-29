@@ -42,15 +42,16 @@
     margin-top: 10%;
     background-color: rgba($color: #ffffff, $alpha: 0.9);
     display: flex;
-    padding: 20px 10px 20px 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 0 20px 40px;
     &-left {
       padding-top: 10px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      text-align: center;
       display: flex;
       flex-direction: column;
     }
-  }
-  &__email {
-    margin-top: 20px;
   }
 }
